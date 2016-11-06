@@ -11,13 +11,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-
-import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
 
@@ -39,7 +35,7 @@ public class HomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.home_page);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -110,7 +106,7 @@ public class HomePage extends AppCompatActivity {
                     return houseSettingFragment;
 
                 case 1:
-                    LivingRoomFragment livingRoomFragment = new LivingRoomFragment();
+                   LivingRoomFragment livingRoomFragment = new LivingRoomFragment();
                     return livingRoomFragment;
 
                 case 2:
