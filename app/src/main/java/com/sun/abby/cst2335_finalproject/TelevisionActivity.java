@@ -26,71 +26,67 @@ public class TelevisionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_television);
 
-        ibUp= (ImageButton) findViewById(R.id.television_up);
-        ibUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "UP", LENGTH_SHORT);
-                toast.show();
-            }
-        });
-
-        ibLeft= (ImageButton) findViewById(R.id.television_left);
-        ibLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "LEFT", LENGTH_SHORT);
-                toast.show();
-            }
-        });
-
-        ibEnter= (ImageButton) findViewById(R.id.television_enter);
-        ibEnter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "Changing to " + etInput.getText(), LENGTH_SHORT);
-                etInput.setText("");
-                toast.show();
-            }
-        });
-
-        ibRight= (ImageButton) findViewById(R.id.television_right);
-        ibRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "RIGHT", LENGTH_SHORT);
-                toast.show();
-            }
-        });
-
-        ibDown= (ImageButton) findViewById(R.id.television_down);
-        ibDown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "DOWN", LENGTH_SHORT);
-                toast.show();
-            }
-        });
-
         etInput = (EditText) findViewById(R.id.television_input);
 
-        ibMic = (ImageButton) findViewById(R.id.television_input_mic);
-        ibMic.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener tvListener = new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "Voice commannd...", LENGTH_SHORT);
-                toast.show();
+            public void onClick(View v) {
+                Toast toast;
+                switch (v.getId()) {
+                    case R.id.television_up:
+                        toast = Toast.makeText(v.getContext(),"UP", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_left:
+                        toast = Toast.makeText(v.getContext(),"LEFT", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_enter:
+                        toast = Toast.makeText(v.getContext(),"ENTER --> " + etInput.getText(), LENGTH_SHORT);
+                        etInput.setText("");
+                        toast.show();
+                        break;
+                    case R.id.television_right:
+                        toast = Toast.makeText(v.getContext(),"RIGHT", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_down:
+                        toast = Toast.makeText(v.getContext(),"DOWN", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_back:
+                        toast = Toast.makeText(v.getContext(),"BACK", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_mic:
+                        toast = Toast.makeText(v.getContext(),"RIGHT", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                }
             }
-        });
+        };
 
-        ibBack = (ImageButton) findViewById(R.id.television_input_back);
-        ibBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(view.getContext(), "Previous channel...", LENGTH_SHORT);
-                toast.show();
-            }
-        });
+        ibUp= (ImageButton) findViewById(R.id.television_up);
+        ibUp.setOnClickListener(tvListener);
+
+        ibLeft= (ImageButton) findViewById(R.id.television_left);
+        ibLeft.setOnClickListener(tvListener);
+
+        ibEnter= (ImageButton) findViewById(R.id.television_enter);
+        ibEnter.setOnClickListener(tvListener);
+
+        ibRight= (ImageButton) findViewById(R.id.television_right);
+        ibRight.setOnClickListener(tvListener);
+
+        ibDown= (ImageButton) findViewById(R.id.television_down);
+        ibDown.setOnClickListener(tvListener);
+
+        ibMic = (ImageButton) findViewById(R.id.television_mic);
+        ibMic.setOnClickListener(tvListener);
+
+        ibBack = (ImageButton) findViewById(R.id.television_back);
+        ibBack.setOnClickListener(tvListener);
+
 
     }
 }

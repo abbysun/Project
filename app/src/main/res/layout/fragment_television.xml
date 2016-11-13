@@ -94,7 +94,7 @@
 
             <ImageButton
                 android:contentDescription="@string/television_desc_back"
-                android:id="@+id/television_input_back"
+                android:id="@+id/television_back"
                 android:background="@android:drawable/ic_menu_revert"
                 android:layout_row="0"
                 android:layout_column="0"
@@ -109,7 +109,7 @@
 
             <ImageButton
                 android:contentDescription="@string/television_desc_mic"
-                android:id="@+id/television_input_mic"
+                android:id="@+id/television_mic"
                 android:background="@android:drawable/ic_btn_speak_now"
                 android:layout_row="0"
                 android:layout_column="2"
