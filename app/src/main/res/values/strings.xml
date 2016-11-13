@@ -3,4 +3,18 @@
     <string name="title_activity_home_page">Smart Control</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Living Room -->
+    <string name="livingroom_television">Television</string>
+    <string name="livingroom_lamp1">Lamp 1</string>
+    <string name="television_input">Enter channel</string>
+    <string name="television_desc_up">Up button</string>
+    <string name="television_desc_left">Left button</string>
+    <string name="television_desc_enter">Enter button</string>
+    <string name="television_desc_right">Right button</string>
+    <string name="television_desc_down">Down button</string>
+    <string name="television_desc_input">Channel input box</string>
+    <string name="television_desc_back">Back button</string>
+    <string name="television_desc_mic">Voice activation button</string>
+
 </resources>
