@@ -74,7 +74,7 @@ public class TelevisionActivity extends AppCompatActivity {
 
         etInput = (EditText) findViewById(R.id.television_input);
 
-        ibMic = (ImageButton) findViewById(R.id.television_input_return);
+        ibMic = (ImageButton) findViewById(R.id.television_input_mic);
         ibMic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
