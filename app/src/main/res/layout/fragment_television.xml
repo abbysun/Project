@@ -1,0 +1,123 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context="com.sun.abby.cst2335_finalproject.TelevisionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <GridLayout
+            android:id="@+id/arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_up"
+                android:id="@+id/television_up"
+                android:background="@android:drawable/ic_media_play"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:rotation="270"/>
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_left"
+                android:id="@+id/television_left"
+                android:background="@android:drawable/ic_media_play"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:rotation="180"/>
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_enter"
+                android:id="@+id/television_enter"
+                android:background="@android:drawable/radiobutton_off_background"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:minWidth="80dp"
+                android:minHeight="80dp"
+                android:layout_gravity="center"/>
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_right"
+                android:id="@+id/television_right"
+                android:background="@android:drawable/ic_media_play"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:minWidth="100dp"
+                android:minHeight="100dp"/>
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_down"
+                android:id="@+id/television_down"
+                android:background="@android:drawable/ic_media_play"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:rotation="90"/>
+
+
+        </GridLayout>
+
+        <EditText
+            android:id="@+id/television_input"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:inputType="numberPassword|textVisiblePassword"
+            android:digits="0123456789"
+            android:ems="4"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:hint="@string/television_input"
+            android:maxLines="1" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="3"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_back"
+                android:id="@+id/television_input_back"
+                android:background="@android:drawable/ic_menu_revert"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:minWidth="70dp"
+                android:minHeight="70dp"/>
+
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="160dp" />
+
+            <ImageButton
+                android:contentDescription="@string/television_desc_mic"
+                android:id="@+id/television_input_mic"
+                android:background="@android:drawable/ic_btn_speak_now"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:minWidth="70dp"
+                android:minHeight="70dp"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
