@@ -3,4 +3,8 @@
     <string name="title_activity_home_page">HomePage</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--House Setting-->
+    <string name="House_Setting">House Setting</string>
+    <string name="Outside_Weather">Outside Weather</string>
 </resources>
