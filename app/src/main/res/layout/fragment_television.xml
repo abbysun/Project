@@ -72,6 +72,12 @@
 
         </GridLayout>
 
+        <TextView
+            android:id="@+id/television_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+
         <EditText
             android:id="@+id/television_input"
             android:layout_width="200dp"
