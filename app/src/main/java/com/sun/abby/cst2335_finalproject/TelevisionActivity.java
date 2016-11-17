@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_SHORT;
@@ -17,6 +18,7 @@ public class TelevisionActivity extends AppCompatActivity {
     ImageButton ibRight;
     ImageButton ibDown;
 
+    TextView tvChannel;
     EditText etInput;
     ImageButton ibMic;
     ImageButton ibBack;
@@ -27,6 +29,8 @@ public class TelevisionActivity extends AppCompatActivity {
         setContentView(R.layout.fragment_television);
 
         etInput = (EditText) findViewById(R.id.television_input);
+        tvChannel = (TextView) findViewById(R.id.television_channel);
+        tvChannel.setText("Channel: 1");
 
         View.OnClickListener tvListener = new View.OnClickListener() {
             @Override
@@ -42,9 +46,8 @@ public class TelevisionActivity extends AppCompatActivity {
                         toast.show();
                         break;
                     case R.id.television_enter:
-                        toast = Toast.makeText(v.getContext(),"ENTER --> " + etInput.getText(), LENGTH_SHORT);
+                        tvChannel.setText("Channel: " + etInput.getText());
                         etInput.setText("");
-                        toast.show();
                         break;
                     case R.id.television_right:
                         toast = Toast.makeText(v.getContext(),"RIGHT", LENGTH_SHORT);
