@@ -21,19 +21,22 @@ public class LivingRoomFragment extends Fragment {
     ListView lrListView;
     ArrayList<String> lrArray;
     ArrayAdapter<String> lrAdapter;
+    boolean mTwoPane;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.living_room, container, false);
 
+        if (rootView.findViewById(R.id.living_room_container) != null) {
+            mTwoPane = true;
+        }
+
         lrArray = new ArrayList<>();
         lrArray.add(getString(R.string.livingroom_television));
         lrArray.add(getString(R.string.livingroom_lamp1));
 
-
         lrAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, lrArray);
-
 
         lrListView = (ListView) rootView.findViewById(R.id.livingroom_listview);
         lrListView.setAdapter(lrAdapter);
@@ -44,10 +47,17 @@ public class LivingRoomFragment extends Fragment {
                 switch (position) {
 
                     case 0:
-                        Context context = view.getContext();
-                        Intent intent = new Intent(context, TelevisionActivity.class);
+                        if (mTwoPane) {
+                            TelevisionFragment fragment = new TelevisionFragment();
+                            getActivity().getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.living_room_container, fragment)
+                                    .commit();
+                        } else {
+                            Context context = view.getContext();
+                            Intent intent = new Intent(context, TelevisionActivity.class);
 
-                        context.startActivity(intent);
+                            context.startActivity(intent);
+                        }
                         break;
 
                     case 1:

@@ -4,84 +4,110 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 
 public class TelevisionFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    ImageButton ibUp;
+    ImageButton ibLeft;
+    ImageButton ibEnter;
+    ImageButton ibRight;
+    ImageButton ibDown;
 
-//    private OnFragmentInteractionListener mListener;
-
-    public TelevisionFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TelevisionFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static TelevisionFragment newInstance(String param1, String param2) {
-        TelevisionFragment fragment = new TelevisionFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    TextView tvChannel;
+    EditText etInput;
+    ImageButton ibMic;
+    ImageButton ibBack;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View tvView = inflater.inflate(R.layout.fragment_television, container, false);
+
+        etInput = (EditText) tvView.findViewById(R.id.television_input);
+        tvChannel = (TextView) tvView.findViewById(R.id.television_channel);
+        tvChannel.setText("Channel: 1");
+
+        View.OnClickListener tvListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast;
+                switch (v.getId()) {
+                    case R.id.television_up:
+                        Log.d(null, "Up button pressed.");
+                        toast = Toast.makeText(v.getContext(),"UP", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_left:
+                        Log.d(null, "Left button pressed.");
+                        toast = Toast.makeText(v.getContext(),"LEFT", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_enter:
+                        Log.d(null, "Right button pressed.");
+                        tvChannel.setText("Channel: " + etInput.getText());
+                        etInput.setText("");
+                        break;
+                    case R.id.television_right:
+                        toast = Toast.makeText(v.getContext(),"RIGHT", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_down:
+                        toast = Toast.makeText(v.getContext(),"DOWN", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_back:
+                        toast = Toast.makeText(v.getContext(),"BACK", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                    case R.id.television_mic:
+                        toast = Toast.makeText(v.getContext(),"RIGHT", LENGTH_SHORT);
+                        toast.show();
+                        break;
+                }
+            }
+        };
+
+        ibUp= (ImageButton) tvView.findViewById(R.id.television_up);
+        ibUp.setOnClickListener(tvListener);
+
+        ibLeft= (ImageButton) tvView.findViewById(R.id.television_left);
+        ibLeft.setOnClickListener(tvListener);
+
+        ibEnter= (ImageButton) tvView.findViewById(R.id.television_enter);
+        ibEnter.setOnClickListener(tvListener);
+
+        ibRight= (ImageButton) tvView.findViewById(R.id.television_right);
+        ibRight.setOnClickListener(tvListener);
+
+        ibDown= (ImageButton) tvView.findViewById(R.id.television_down);
+        ibDown.setOnClickListener(tvListener);
+
+        ibMic = (ImageButton) tvView.findViewById(R.id.television_mic);
+        ibMic.setOnClickListener(tvListener);
+
+        ibBack = (ImageButton) tvView.findViewById(R.id.television_back);
+        ibBack.setOnClickListener(tvListener);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_television, container, false);
+//        return inflater.inflate(R.layout.fragment_television, container, false);
+        return tvView;
     }
-
-//    // TODO: Rename method, update argument and hook method into UI event
-//    public void onButtonPressed(Uri uri) {
-//        if (mListener != null) {
-//            mListener.onFragmentInteraction(uri);
-//        }
-//    }
-
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-
-//    @Override
-//    public void onDetach() {
-//        super.onDetach();
-//        mListener = null;
-//    }
 
 //    /**
 //     * This interface must be implemented by activities that contain this

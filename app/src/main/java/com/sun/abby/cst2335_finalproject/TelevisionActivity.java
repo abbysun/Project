@@ -89,7 +89,5 @@ public class TelevisionActivity extends AppCompatActivity {
 
         ibBack = (ImageButton) findViewById(R.id.television_back);
         ibBack.setOnClickListener(tvListener);
-
-
     }
 }
