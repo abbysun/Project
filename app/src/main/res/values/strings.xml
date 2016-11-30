@@ -7,4 +7,7 @@
     <!--House Setting-->
     <string name="House_Setting">House Setting</string>
     <string name="Outside_Weather">Outside Weather</string>
+    <string name="title_activity_garage">Garage</string>
+    <string name="title_activity_house_temp">HouseTemp</string>
+    <string name="title_activity_weather">Weather</string>
 </resources>

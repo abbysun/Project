@@ -1,5 +1,7 @@
 package com.sun.abby.cst2335_finalproject;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -42,8 +44,30 @@ public class HouseSettingFragment extends Fragment {
                 String itemValue = (String)listView.getItemAtPosition(position);
 
                 //Alert
-                Toast.makeText(getContext(),"Position: "+ itemPosition+" List Item: "
-                        +itemValue, Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),
+                        itemValue+" has been selected", Toast.LENGTH_LONG).show();
+
+                //click to open each activity
+                switch (position)
+                {
+                    case 0:
+                        Context context = view.getContext();
+                        Intent garageActivity = new Intent(context, Garage.class);
+                        startActivity(garageActivity);
+                        break;
+
+                    case 1:
+                        Context ctx = view.getContext();
+                        Intent houseTempActivity = new Intent(ctx, HouseTemp.class);
+                        startActivity(houseTempActivity);
+                        break;
+
+                    case 2:
+                        Context context1 = view.getContext();
+                        Intent weatherActivity = new Intent(context1, Weather.class);
+                        startActivity(weatherActivity);
+                        break;
+                }
 
 
             }
@@ -53,4 +77,6 @@ public class HouseSettingFragment extends Fragment {
 
             return rootView;
     }
+
+
 }// end of HouseSettingFragment
