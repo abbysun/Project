@@ -4,6 +4,13 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
+    <!-- Kitchen Room -->
+    <string name="kitchen_index_text">Welcome to Smart Kitchen</string>
+    <string name="kitchen_index_button">Start cooking!</string>
+    <string name="kitchen_list_view">Select an appliance: </string>
+    <string name="turn_on">Turn On</string>
+    <string name="turn_off">Turn Off</string>
+
     <!-- Living Room -->
     <string name="livingroom_television">Television</string>
     <string name="livingroom_lamp1">Lamp 1</string>
@@ -16,5 +23,4 @@
     <string name="television_desc_input">Channel input box</string>
     <string name="television_desc_back">Back button</string>
     <string name="television_desc_mic">Voice activation button</string>
-
 </resources>
