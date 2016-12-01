@@ -21,6 +21,8 @@
         <activity
             android:name=".TelevisionActivity"
             android:label="Television" />
+        <activity android:name=".KitchenActivity" />
+        <activity android:name=".MicrowaveActivity"></activity>
     </application>
 
 </manifest>
