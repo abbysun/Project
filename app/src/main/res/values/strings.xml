@@ -7,9 +7,14 @@
     <!-- Kitchen Room -->
     <string name="kitchen_index_text">Welcome to Smart Kitchen</string>
     <string name="kitchen_index_button">Start cooking!</string>
-    <string name="kitchen_list_view">Select an appliance: </string>
+    <string name="kitchen_list_view">Select a kitchen appliance: </string>
     <string name="turn_on">Turn On</string>
     <string name="turn_off">Turn Off</string>
+    <string name="kitchen_icon">Kitchen Icon</string>
+    <string name="action_back">Back</string>
+    <string name="fridge_temperature">Fridge Temperature</string>
+    <string name="freezer_temperature">Freezer Temperature</string>
+    <string name="placeholder_temp">1°C</string>
 
     <!-- Living Room -->
     <string name="livingroom_television">Television</string>
@@ -23,4 +28,7 @@
     <string name="television_desc_input">Channel input box</string>
     <string name="television_desc_back">Back button</string>
     <string name="television_desc_mic">Voice activation button</string>
+    <string name="title_activity_kitchen_lighting">KitchenLightingActivity</string>
+    <string name="title_activity_cooking_fragments">CookingFragmentsActivity</string>
+    <string name="title_activity_fridge">FridgeActivity</string>
 </resources>
