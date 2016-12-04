@@ -37,6 +37,8 @@ public class KitchenActivity extends AppCompatActivity {
 
                     case 1:
                         Toast.makeText(getApplicationContext(), "clicked Fridge", Toast.LENGTH_SHORT).show();
+                        Intent fridgeIntent = new Intent(getApplicationContext(), FridgeActivity.class);
+                        startActivity(fridgeIntent);
                         break;
 
                     case 2:
