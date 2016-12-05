@@ -4,7 +4,13 @@
     tools:context="com.sun.abby.cst2335_finalproject.Kitchen">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="200"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_kitchen"
+        android:orderInCategory="100"
+        android:title="@string/kitchen_icon"
+        android:icon="@drawable/kitchen_icon"
+        app:showAsAction="always" />
 </menu>

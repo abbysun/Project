@@ -1,5 +1,6 @@
 package com.sun.abby.cst2335_finalproject;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity {
 
@@ -64,24 +66,23 @@ public class HomePage extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home_page, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(item.getItemId()){
+            case R.id.action_settings:
+                Toast.makeText(this, "Setting clicked", Toast.LENGTH_SHORT);
+                break;
+            case R.id.action_kitchen:
+                Intent toKitchen = new Intent(this.getApplicationContext(), KitchenActivity.class);
+                this.startActivity(toKitchen);
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     //placeHolderFragment is deleted from here

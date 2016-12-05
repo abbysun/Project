@@ -22,7 +22,11 @@
             android:name=".TelevisionActivity"
             android:label="Television" />
         <activity android:name=".KitchenActivity" />
-        <activity android:name=".MicrowaveActivity"></activity>
+        <activity android:name=".MicrowaveActivity" />
+        <activity
+            android:name=".FridgeActivity"
+            android:label="@string/title_activity_fridge"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
