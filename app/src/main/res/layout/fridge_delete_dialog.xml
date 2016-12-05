@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:src="@drawable/food"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scaleType="center"
+        android:background="@android:color/holo_orange_dark"
+        android:contentDescription="@string/app_name" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dialog_relative_layout"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <TextView
+            android:text="@string/delete_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_from"
+            android:textSize="18sp"
+            android:textAlignment="textStart" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_fridge"
+                android:text="@string/fridge_text"
+                android:checked="true" />
+
+            <RadioButton
+                android:text="@string/freezer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_freezer" />
+        </RadioGroup>
+
+    </GridLayout>
+
+    <TextView
+        android:text="@string/confirm_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="18sp" />
+
+</LinearLayout>
