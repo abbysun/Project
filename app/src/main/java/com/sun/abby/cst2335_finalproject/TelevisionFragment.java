@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
-
 public class TelevisionFragment extends Fragment {
 
     ImageButton ibUp;

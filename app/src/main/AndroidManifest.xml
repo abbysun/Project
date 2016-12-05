@@ -21,6 +21,12 @@
         <activity
             android:name=".TelevisionActivity"
             android:label="Television" />
+        <activity
+            android:name=".BlindsActivity"
+            android:label="Blinds" />
+        <activity
+            android:name=".LightsActivity"
+            android:label="Lights" />
         <activity android:name=".KitchenActivity" />
         <activity android:name=".MicrowaveActivity" />
         <activity

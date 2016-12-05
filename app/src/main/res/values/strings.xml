@@ -19,6 +19,7 @@
     <!-- Living Room -->
     <string name="livingroom_television">Television</string>
     <string name="livingroom_lamp1">Lamp 1</string>
+    <string name="living_room_toolbar_title">Living Room</string>
     <string name="television_input">Enter channel</string>
     <string name="television_desc_up">Up button</string>
     <string name="television_desc_left">Left button</string>
@@ -28,6 +29,15 @@
     <string name="television_desc_input">Channel input box</string>
     <string name="television_desc_back">Back button</string>
     <string name="television_desc_mic">Voice activation button</string>
+    <string name="blinds_1">Left Window</string>
+    <string name="blinds_2">Center Window</string>
+    <string name="blinds_3">Right Window</string>
+    <string name="light_1">Lamp 1</string>
+    <string name="light_2">Lamp 2</string>
+    <string name="light_3">Lamp 3</string>
+    <string name="light_3_color">Choose a color...</string>
+
+
     <string name="title_activity_kitchen_lighting">KitchenLightingActivity</string>
     <string name="title_activity_cooking_fragments">CookingFragmentsActivity</string>
     <string name="title_activity_fridge">FridgeActivity</string>
