@@ -19,16 +19,9 @@
         android:layout_alignBottom="@+id/microwaveImage"
         android:layout_alignParentStart="true"
         android:id="@+id/inputTime"
-        android:hint="Enter Time in Seconds"
+        android:hint="@string/enter_time"
         android:layout_toStartOf="@+id/onOffButton"
-        android:backgroundTint="@android:color/darker_gray" />
-
-    <Button
-        android:text="@string/turn_on"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/onOffButton"
-        android:layout_alignTop="@+id/inputTime"
+        android:backgroundTint="@android:color/darker_gray"
         android:layout_alignParentEnd="true" />
 
     <ImageView
@@ -44,12 +37,33 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:text="@string/turn_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onOffButton"
+        android:layout_below="@+id/inputTime"
+        android:layout_toStartOf="@+id/microwave_stop"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:text="@string/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/microwave_stop"
+        android:enabled="false"
+        android:layout_alignBaseline="@+id/onOffButton"
+        android:layout_alignBottom="@+id/onOffButton"
+        android:layout_alignParentEnd="true" />
+
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:id="@+id/progressBar"
-        android:layout_below="@+id/onOffButton"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/microwave_progress"
+        android:layout_marginBottom="11dp"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:max="100"/>
 </RelativeLayout>

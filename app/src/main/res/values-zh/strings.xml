@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">智能家控制</string>
+    <string name="title_activity_home_page">智能家控制</string>
+    <string name="action_settings">设置</string>
+    <string name="section_format">世界好: %1$d</string>
+
+    <!-- Kitchen Room -->
+    <string name="kitchen_index_text">欢迎来到智能厨房</string>
+    <string name="kitchen_index_button">开始做饭!</string>
+    <string name="kitchen_list_view">请选一个家具: </string>
+    <string name="turn_on">开</string>
+    <string name="turn_off">关</string>
+    <string name="kitchen_icon">厨房图标</string>
+    <string name="action_back">后进</string>
+    <string name="fridge_temperature">冷藏室温度</string>
+    <string name="freezer_temperature">冷冻室温度</string>
+    <string name="init_fridge_temp">0°C</string>
+    <string name="init_freezer_temp">-10°C</string>
+    <string name="title_activity_kitchen_lighting">厨房灯控制</string>
+    <string name="title_activity_cooking_fragments">做饭控制</string>
+    <string name="title_activity_fridge">冰箱控制</string>
+    <string name="action_add_item">加食品</string>
+    <string name="action_drop_item">删食品</string>
+    <string name="enter_food_name">食物名：</string>
+    <string name="enter_food_description">食品描述：</string>
+    <string name="fridge_text">冷藏室</string>
+    <string name="freezer_text">冷冻室</string>
+    <string name="confirm_item_delete">您确定想删这个食品吗？</string>
+    <string name="action_kitchen_help">厨房帮助</string>
+    <string name="kitchen_help_msg">作者: Abby Sun. 第一版本. 点锅的图标或去厨房页会带你去看厨房电器.</string>
+    <string name="action_help">帮助</string>
+    <string name="ok">OK</string>
+    <string name="cancel">取消</string>
+    <string name="add">加</string>
+    <string name="delete">删</string>
+    <string name="delete_from">从这删除：</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="reset">从新输入时间</string>
+    <string name="enter_time">请输入时间（秒）</string>
+    <string name="stop">停止</string>
+    <string name="stop_microwave">停止微波炉与从新输入时间</string>
+    <string name="control_kitchen_light">厨房灯控制</string>
+
+
+    <!-- Living Room -->
+    <string name="livingroom_television">Television</string>
+    <string name="livingroom_lamp1">Lamp 1</string>
+    <string name="television_input">Enter channel</string>
+    <string name="television_desc_up">Up button</string>
+    <string name="television_desc_left">Left button</string>
+    <string name="television_desc_enter">Enter button</string>
+    <string name="television_desc_right">Right button</string>
+    <string name="television_desc_down">Down button</string>
+    <string name="television_desc_input">Channel input box</string>
+    <string name="television_desc_back">Back button</string>
+    <string name="television_desc_mic">Voice activation button</string>
+    <string name="title_activity_kitchen_light">KitchenLightActivity</string>
+</resources>
