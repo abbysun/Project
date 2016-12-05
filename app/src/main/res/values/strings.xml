@@ -18,7 +18,7 @@
 
     <!-- Living Room -->
     <string name="livingroom_television">Television</string>
-    <string name="livingroom_lamp1">Lamp 1</string>
+    <string name="livingroom_lights">Lights</string>
     <string name="living_room_toolbar_title">Living Room</string>
     <string name="television_input">Enter channel</string>
     <string name="television_desc_up">Up button</string>
@@ -35,7 +35,15 @@
     <string name="light_1">Lamp 1</string>
     <string name="light_2">Lamp 2</string>
     <string name="light_3">Lamp 3</string>
-    <string name="light_3_color">Choose a color...</string>
+    <string name="light_3_color">Choose a color…</string>
+    <string name="color_dialog_ok">OK</string>
+    <string name="color_dialog_cancel">Cancel</string>
+    <string name="color_dialog_message">Choose a color</string>
+    <string name="color_alpha">Alpha</string>
+    <string name="color_red">Red</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="livingroom_menu_about">About</string>
 
 
     <string name="title_activity_kitchen_lighting">KitchenLightingActivity</string>

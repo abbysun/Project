@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,12 +15,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
-
-import static android.widget.Toast.LENGTH_SHORT;
 
 public class LivingRoomFragment extends Fragment {
 
@@ -29,6 +25,7 @@ public class LivingRoomFragment extends Fragment {
     ArrayList<String> lrArray;
     ArrayAdapter<String> lrAdapter;
     boolean mTwoPane;
+    Toolbar toolbar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,15 +39,17 @@ public class LivingRoomFragment extends Fragment {
         }
 
 
-        // setting up toolbar
-        Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.living_room_toolbar);
-        getActivity().setActionBar(toolbar);
+//        // setting up toolbar
+//        toolbar = (Toolbar) rootView.findViewById(R.id.living_room_toolbar);
+//        getActivity().setActionBar(toolbar);
+
+
 
 
         // Listing of objects to control
         lrArray = new ArrayList<>();
         lrArray.add(getString(R.string.livingroom_television));
-        lrArray.add(getString(R.string.livingroom_lamp1));
+        lrArray.add(getString(R.string.livingroom_lights));
         lrArray.add("Blinds");
 
         lrAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, lrArray);
@@ -125,24 +124,35 @@ public class LivingRoomFragment extends Fragment {
         return rootView;
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getActivity().getMenuInflater();
-        inflater.inflate(R.menu.menu_living_room, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // action with ID action_refresh was selected
-            case R.id.menu_living_room_about:
-                // open dialog w/ author, version, instructions
-
-                break;
-            default:
-                break;
-        }
-
-        return true;
-    }
+//    public boolean onCreateOptionsMenu(Menu menu) {
+////        MenuInflater inflater = getActivity().getMenuInflater();
+////        inflater.inflate(R.menu.menu_living_room, menu);
+////        return true;
+//
+//        toolbar.inflateMenu(R.menu.menu_living_room);
+//        toolbar.setOnMenuItemClickListener(
+//                new Toolbar.OnMenuItemClickListener() {
+//                    @Override
+//                    public boolean onMenuItemClick(MenuItem item) {
+//                        return onOptionsItemSelected(item);
+//                    }
+//                });
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            // action with ID action_refresh was selected
+//            case R.id.menu_living_room_about:
+//                // open dialog w/ author, version, instructions
+//
+//                break;
+//            default:
+//                break;
+//        }
+//
+//        return true;
+//    }
 }
