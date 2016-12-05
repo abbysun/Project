@@ -1,5 +1,6 @@
 package com.sun.abby.cst2335_finalproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +17,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import android.support.v7.app.AlertDialog;
 
 public class HomePage extends AppCompatActivity {
 
@@ -51,16 +54,6 @@ public class HomePage extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
 
@@ -73,8 +66,14 @@ public class HomePage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
-            case R.id.action_settings:
-                Toast.makeText(this, "Setting clicked", Toast.LENGTH_SHORT);
+            case R.id.action_kitchen_help:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle(R.string.action_kitchen_help).setMessage(R.string.kitchen_help_msg)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
+                            public void onClick(DialogInterface dialog, int id){ }
+                        });
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 break;
             case R.id.action_kitchen:
                 Intent toKitchen = new Intent(this.getApplicationContext(), KitchenActivity.class);
