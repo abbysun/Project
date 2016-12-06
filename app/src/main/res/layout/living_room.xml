@@ -3,14 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/living_room_toolbar_title"
-        android:id="@+id/living_room_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryDark"/>
-
+    <include layout="@layout/livingroom_bar"/>
 
     <ListView
         android:id="@+id/livingroom_listview"

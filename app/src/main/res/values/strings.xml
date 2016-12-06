@@ -17,8 +17,27 @@
     <string name="placeholder_temp">1°C</string>
 
     <!-- Living Room -->
+    <string name="about_title">About</string>
+    <string name="about_livingroom">Author: Chase Thorne\nVersion: 1.0\n\nInstructions:</string>
+    <string name="about_television">\tTelevision Controls:
+        \n\- Power on or off the TV with the top-left button.
+        \n\- Navigate the menus with the arrow buttons.
+        \n\- Select a menu item with the Enter button, located in the center of the arrows
+        \n\- Enter the desired channel in the text box below the arrows.
+        \n\- The back button, located to the bottom left, returns you to your previous page or channel.
+        \n\- The microphone prompts you to speak aloud the desired channel to go to, rather than typing it in the text box.</string>
+    <string name="about_lights">\tLight Controls:
+        \n\- Move the sliders to control the lights.
+        \n\- Left to dim or shut off, right to brighten or turn on.
+        \n\- Click the \"CHOOSE COLOR\" button to change the light\'s color.</string>
+    <string name="about_blinds">\tBlinds Controls:
+        \n\- Move the sliders control the blinds.
+        \n\- Left to lower, right to raise.</string>
+    <string name="about_credits">\tCredits:
+        \nBlinds icons from Icons8 @ https://icons8.com</string>
     <string name="livingroom_television">Television</string>
     <string name="livingroom_lights">Lights</string>
+    <string name="livingroom_blinds">Blinds</string>
     <string name="living_room_toolbar_title">Living Room</string>
     <string name="television_input">Enter channel</string>
     <string name="television_desc_up">Up button</string>
@@ -29,13 +48,13 @@
     <string name="television_desc_input">Channel input box</string>
     <string name="television_desc_back">Back button</string>
     <string name="television_desc_mic">Voice activation button</string>
-    <string name="blinds_1">Left Window</string>
-    <string name="blinds_2">Center Window</string>
-    <string name="blinds_3">Right Window</string>
+    <string name="blinds_1">Left</string>
+    <string name="blinds_2">Center</string>
+    <string name="blinds_3">Right</string>
     <string name="light_1">Lamp 1</string>
     <string name="light_2">Lamp 2</string>
     <string name="light_3">Lamp 3</string>
-    <string name="light_3_color">Choose a color…</string>
+    <string name="light_3_color">Choose color</string>
     <string name="color_dialog_ok">OK</string>
     <string name="color_dialog_cancel">Cancel</string>
     <string name="color_dialog_message">Choose a color</string>
@@ -43,7 +62,6 @@
     <string name="color_red">Red</string>
     <string name="color_green">Green</string>
     <string name="color_blue">Blue</string>
-    <string name="livingroom_menu_about">About</string>
 
 
     <string name="title_activity_kitchen_lighting">KitchenLightingActivity</string>

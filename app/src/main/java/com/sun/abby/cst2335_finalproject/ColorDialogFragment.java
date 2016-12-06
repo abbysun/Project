@@ -17,7 +17,6 @@ import static android.support.design.widget.Snackbar.LENGTH_LONG;
 
 public class ColorDialogFragment extends DialogFragment {
 
-    SeekBar alpha;
     SeekBar red;
     SeekBar green;
     SeekBar blue;
@@ -29,7 +28,6 @@ public class ColorDialogFragment extends DialogFragment {
         // Get the layout inflater
         LayoutInflater inflater = getActivity().getLayoutInflater();
 
-        alpha = (SeekBar) getActivity().findViewById(R.id.color_seekbar_alpha);
         red = (SeekBar) getActivity().findViewById(R.id.color_seekbar_red);
         green = (SeekBar) getActivity().findViewById(R.id.color_seekbar_green);
         blue = (SeekBar) getActivity().findViewById(R.id.color_seekbar_blue);
@@ -42,8 +40,7 @@ public class ColorDialogFragment extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         colorText = "You've changed the color of the light!";
-//                        colorText = "Alpha: " + alpha.getProgress()
-//                                + ", Red: "+ red.getProgress()
+//                        colorText = ", Red: "+ red.getProgress()
 //                                + ", Green: "+ green.getProgress()
 //                                + ", Blue: "+ blue.getProgress();
                         Snackbar.make(getActivity().findViewById(R.id.light_3_seekbar), colorText, Snackbar.LENGTH_LONG)

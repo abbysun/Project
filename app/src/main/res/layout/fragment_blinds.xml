@@ -4,80 +4,135 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:gravity="top">
 
-    <LinearLayout
-        android:id="@+id/blinds_layout"
-        android:orientation="vertical"
+    <RelativeLayout
+        android:padding="20dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:rotation="270">
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray">
 
-        <LinearLayout
-            android:padding="10dp"
-            android:orientation="horizontal"
+        <TextView
+            android:id="@+id/blinds_text_1"
+            android:text="@string/blinds_1"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/blinds_up_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blinds_up"
+            android:layout_toEndOf="@id/blinds_text_1"/>
+
+        <ImageView
+            android:id="@+id/blinds_down_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blinds_down"
+            android:layout_alignParentEnd="true"/>
+
+        <SeekBar
+            android:id="@+id/blinds_seekbar_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/blinds_up_1"
+            android:layout_toStartOf="@id/blinds_down_1"
+            android:gravity="center_vertical"/>
 
-            <TextView
-                android:text="@string/blinds_1"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"/>
+    </RelativeLayout>
 
-            <SeekBar
-                android:id="@+id/blinds_seekbar_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
 
-        </LinearLayout>
+    <RelativeLayout
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray">
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/blinds_text_2"
+            android:text="@string/blinds_2"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"/>
 
-        <LinearLayout
-            android:padding="10dp"
+        <ImageView
+            android:id="@+id/blinds_up_2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blinds_up"
+            android:layout_toEndOf="@id/blinds_text_2"/>
+
+        <ImageView
+            android:id="@+id/blinds_down_2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blinds_down"
+            android:layout_alignParentEnd="true"/>
+
+        <SeekBar
+            android:id="@+id/blinds_seekbar_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray"
-            android:orientation="horizontal">
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/blinds_up_2"
+            android:layout_toStartOf="@id/blinds_down_2"
+            android:gravity="center_vertical"/>
 
-            <TextView
-                android:text="@string/blinds_2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"/>
+    </RelativeLayout>
 
-            <SeekBar
-                android:id="@+id/blinds_seekbar_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
 
-        </LinearLayout>
+    <RelativeLayout
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray">
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/blinds_text_3"
+            android:text="@string/blinds_3"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"/>
 
-        <LinearLayout
-            android:padding="10dp"
+        <ImageView
+            android:id="@+id/blinds_up_3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blinds_up"
+            android:layout_toEndOf="@id/blinds_text_3"/>
+
+        <ImageView
+            android:id="@+id/blinds_down_3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blinds_down"
+            android:layout_alignParentEnd="true"/>
+
+        <SeekBar
+            android:id="@+id/blinds_seekbar_3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray">
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/blinds_up_3"
+            android:layout_toStartOf="@id/blinds_down_3"
+            android:gravity="center_vertical"/>
 
-            <TextView
-                android:text="@string/blinds_3"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"/>
-
-            <SeekBar
-                android:id="@+id/blinds_seekbar_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
-

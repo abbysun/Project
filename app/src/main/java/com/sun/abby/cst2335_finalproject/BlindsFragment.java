@@ -25,21 +25,6 @@ public class BlindsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View blindsView = inflater.inflate(R.layout.fragment_blinds, container, false);
 
-        final LinearLayout mLayout = (LinearLayout) blindsView.findViewById(R.id.blinds_layout);
-
-        mLayout.post(new Runnable() {
-
-            @Override
-            public void run() {
-                LinearLayout.LayoutParams mParams;
-                mParams = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
-                double width = mLayout.getHeight() * 0.8;
-                mParams.width = (int)width;
-                mLayout.setLayoutParams(mParams);
-                mLayout.postInvalidate();
-            }
-        });
-
         return blindsView;
     }
 }
