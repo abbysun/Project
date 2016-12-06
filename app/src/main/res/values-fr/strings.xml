@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LivingRoom -->
+    <string name="app_name">Smart Control</string>
+    <string name="about_blinds">\tBlinds Contrôles:
+        \n\- Déplacez les curseurs pour contrôler les stores.
+        \n\- Gauche à baisser, droit de lever.</string>
+    <string name="blinds_1">Gauche</string>
+    <string name="blinds_3">Droite</string>
+    <string name="blinds_2">Milieu</string>
+    <string name="dialog_cancel">Annuler</string>
+    <string name="action_back">Reculer</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="dialog_color_alpha">Alpha</string>
+    <string name="dialog_color_blue">Bleu</string>
+    <string name="dialog_color_green">Vert</string>
+    <string name="dialog_color_red">Rouge</string>
+    <string name="dialog_color_message">Choisissez une couleur</string>
+    <string name="dialog_color_title">Couleur</string>
+    <string name="dialog_ok">Accepter</string>
+    <string name="about_title">À propos</string>
+    <string name="light_1">Lampe 1</string>
+    <string name="light_2">Lampe 2</string>
+    <string name="light_3">Lampe 3</string>
+    <string name="livingroom_blinds">Stores</string>
+    <string name="livingroom_lights">Lumières</string>
+    <string name="livingroom_television">Télévision</string>
+    <string name="livingroom_input_hint">Ajouter ou supprimer un élément</string>
+    <string name="light_3_color">Choisir la couleur</string>
+    <string name="television_desc_back">Bouton de retour</string>
+    <string name="television_desc_down">Flèche vers le bas</string>
+    <string name="television_desc_up">Flèche vers le haut</string>
+    <string name="television_desc_enter">Bouton Entrée</string>
+    <string name="television_desc_input">Boîte de saisie du canal</string>
+    <string name="television_desc_left">Flèche gauche</string>
+    <string name="television_desc_right">Flèche droite</string>
+    <string name="television_input">Entrer dans le canal</string>
+    <string name="television_desc_mic">Bouton d\'activation vocale</string>
+    <string name="about_credits">\tCrédits:
+        \n\Icônes Blinds de Icons8 @ https://icons8.com</string>
+    <string name="about_lights">\tContrôles de lumière:
+        \n\- Déplacez les curseurs pour contrôler les lumières.
+        \n\- Gauche à l\'obscurité ou à l\'arrêt, à droite pour égayer ou allumer.
+        \n\- Cliquez sur le bouton \"CHOISIR LA COULEUR\" pour changer la couleur de la lumière.</string>
+    <string name="about_livingroom">Auteur: Chase Thorne Version: 1.0  Instructions:</string>
+    <string name="about_livingroomlist">\tListe des contrôles:
+        \n\- Pour ajouter un élément à la liste, entrez le nom dans la zone de texte et appuyez sur l\'icône (+).
+        \n\- Pour supprimer un élément de la liste, entrez le nom dans la zone de texte et appuyez sur l\'icône de la poubelle.</string>
+    <string name="about_television">\tCommandes de télévision:
+        \n\- Allumez ou éteignez le téléviseur avec le bouton en haut à gauche.
+        \n\- Naviguez dans les menus à l\'aide des touches fléchées.
+        \n\- Sélectionnez un élément de menu avec le bouton Enter, situé au centre des flèches
+        \n\- Entrez le canal souhaité dans la zone de texte sous les flèches.
+        \n\- Le bouton de retour situé en bas à gauche vous ramène à la page ou au canal précédent.
+        \n\- Le microphone vous invite à parler à haute voix le canal souhaité à aller à, plutôt que de le taper dans la zone de texte.</string>
+</resources>

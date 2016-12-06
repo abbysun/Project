@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/color_red"
+            android:text="@string/dialog_color_red"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black" />
@@ -32,7 +32,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/color_green"
+            android:text="@string/dialog_color_green"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black" />
@@ -52,7 +52,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/color_blue"
+            android:text="@string/dialog_color_blue"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black" />

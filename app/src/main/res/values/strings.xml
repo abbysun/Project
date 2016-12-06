@@ -17,8 +17,13 @@
     <string name="placeholder_temp">1°C</string>
 
     <!-- Living Room -->
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
     <string name="about_title">About</string>
     <string name="about_livingroom">Author: Chase Thorne\nVersion: 1.0\n\nInstructions:</string>
+    <string name="about_livingroomlist">\tList controls:
+        \n\- To add an item to the list, enter the name in the text box, and press the (+) icon.
+        \n\- To remove an item from the list, enter the name in the text box, and press the garbage can icon.</string>
     <string name="about_television">\tTelevision Controls:
         \n\- Power on or off the TV with the top-left button.
         \n\- Navigate the menus with the arrow buttons.
@@ -38,7 +43,7 @@
     <string name="livingroom_television">Television</string>
     <string name="livingroom_lights">Lights</string>
     <string name="livingroom_blinds">Blinds</string>
-    <string name="living_room_toolbar_title">Living Room</string>
+    <string name="livingroom_input_hint">Add or Remove Item</string>
     <string name="television_input">Enter channel</string>
     <string name="television_desc_up">Up button</string>
     <string name="television_desc_left">Left button</string>
@@ -49,19 +54,18 @@
     <string name="television_desc_back">Back button</string>
     <string name="television_desc_mic">Voice activation button</string>
     <string name="blinds_1">Left</string>
-    <string name="blinds_2">Center</string>
+    <string name="blinds_2">Middle</string>
     <string name="blinds_3">Right</string>
     <string name="light_1">Lamp 1</string>
     <string name="light_2">Lamp 2</string>
     <string name="light_3">Lamp 3</string>
     <string name="light_3_color">Choose color</string>
-    <string name="color_dialog_ok">OK</string>
-    <string name="color_dialog_cancel">Cancel</string>
-    <string name="color_dialog_message">Choose a color</string>
-    <string name="color_alpha">Alpha</string>
-    <string name="color_red">Red</string>
-    <string name="color_green">Green</string>
-    <string name="color_blue">Blue</string>
+    <string name="dialog_color_title">Color</string>
+    <string name="dialog_color_message">Choose a color</string>
+    <string name="dialog_color_alpha">Alpha</string>
+    <string name="dialog_color_red">Red</string>
+    <string name="dialog_color_green">Green</string>
+    <string name="dialog_color_blue">Blue</string>
 
 
     <string name="title_activity_kitchen_lighting">KitchenLightingActivity</string>

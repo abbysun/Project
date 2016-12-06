@@ -9,8 +9,6 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.widget.SeekBar;
 
-import static android.support.design.widget.Snackbar.LENGTH_LONG;
-
 /**
  * Created by null on 2016-12-05.
  */
@@ -34,9 +32,9 @@ public class ColorDialogFragment extends DialogFragment {
 
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        builder.setView(inflater.inflate(R.layout.light_color_dialog, null))
+        builder.setView(inflater.inflate(R.layout.dialog_light_color, null))
                 // Add action buttons
-                .setPositiveButton(R.string.color_dialog_ok, new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         colorText = "You've changed the color of the light!";
@@ -47,7 +45,7 @@ public class ColorDialogFragment extends DialogFragment {
                                 .setAction("Action", null).show();
                     }
                 })
-                .setNegativeButton(R.string.color_dialog_cancel, new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         ColorDialogFragment.this.getDialog().cancel();
                     }

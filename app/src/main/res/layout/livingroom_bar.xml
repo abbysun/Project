@@ -1,20 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="10dp"
-    android:gravity="end">
+    android:padding="10dp">
 
-    <ProgressBar
-        android:id="@+id/livingroom_progressbar"
-        android:layout_width="30dp"
-        android:layout_height="30dp" />
+    <LinearLayout
+        android:id="@+id/livingroom_input_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/livingroom_progressbar">
+
+        <ImageButton
+            android:id="@+id/livingroom_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_delete" />
+
+        <ImageButton
+            android:id="@+id/livingroom_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_add" />
+
+        <EditText
+            android:id="@+id/livingroom_input_box"
+            android:hint="@string/livingroom_input_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/livingroom_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/ic_menu_info_details" />
+        android:background="@android:drawable/ic_menu_info_details"
+        android:layout_alignParentEnd="true"/>
 
-</LinearLayout>
+    <ProgressBar
+        android:id="@+id/livingroom_progressbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toStartOf="@+id/livingroom_help"/>
+
+</RelativeLayout>
