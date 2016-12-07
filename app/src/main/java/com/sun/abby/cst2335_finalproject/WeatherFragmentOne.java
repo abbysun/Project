@@ -2,8 +2,10 @@ package com.sun.abby.cst2335_finalproject;
 
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -61,7 +63,7 @@ public class WeatherFragmentOne extends Fragment {
         detail= (TextView)view.findViewById(R.id.detail);
         cur_temp = (TextView)view.findViewById(R.id.temperature);
         pBar = (ProgressBar)view.findViewById(R.id.progressBar);
-
+        pBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
         new WeatherQuery().execute(weatherURL);
 
         return view;

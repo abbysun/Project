@@ -12,7 +12,7 @@
     tools:context="com.sun.abby.cst2335_finalproject.Garage">
 
     <TextView
-        android:text="Garage Light"
+        android:text="@string/garage_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
         android:id="@+id/gargeLight" />
 
     <TextView
-        android:text="Garage Door"
+        android:text="@string/garagedoor_openner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toggleButton_light"
@@ -38,8 +38,8 @@
         android:layout_below="@+id/garageDoor"
         android:layout_alignStart="@+id/garageDoor"
         android:onClick="doorClick"
-        android:textOff="Closed"
-        android:textOn="Opened"/>
+        android:textOff="Open"
+        android:textOn="Close"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -48,7 +48,9 @@
         android:layout_alignBottom="@+id/toggleButton_light"
         android:layout_toEndOf="@+id/toggleButton_door"
 
-        android:layout_alignTop="@+id/gargeLight" />
+        android:layout_alignTop="@+id/gargeLight"
+        android:src="@drawable/lightoff"/>
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -58,12 +60,13 @@
         android:layout_alignBottom="@+id/toggleButton_door"
         android:layout_alignEnd="@+id/lightOnOff"
         android:layout_alignTop="@+id/garageDoor"
-        android:layout_toEndOf="@+id/lightOnOff" />
+        android:layout_toEndOf="@+id/toggleButton_door"
+        android:src="@drawable/doorclosed" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/garage"
+        android:src="@drawable/garage"
         android:layout_below="@+id/toggleButton_door"
         android:layout_alignStart="@+id/toggleButton_door"
         android:layout_marginTop="84dp"
@@ -75,8 +78,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/toggleButton_light"
         android:onClick="lightClick"
-        android:textOff="Off"
-        android:textOn="On"
+        android:textOff="@string/light_on"
+        android:textOn="@string/light_off"
         android:layout_below="@+id/gargeLight"
         android:layout_alignStart="@+id/gargeLight" />
 </RelativeLayout>

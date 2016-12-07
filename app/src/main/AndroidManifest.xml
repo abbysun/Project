@@ -24,8 +24,12 @@
             android:name=".HouseTemp"
             android:label="@string/title_activity_house_temp"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Garage" />
         <activity android:name=".Weather" />
-        <activity android:name=".Garage"></activity>
+        <activity
+            android:name=".ListViewTemp"
+            android:label="@string/title_activity_list_view_temp"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -24,5 +24,17 @@
         android:headerDividersEnabled="true"
         android:layout_below="@+id/imageView" />
 
+    <Button
+        android:text="@string/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/about"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="294dp"
+        android:layout_marginBottom="447dp"
+        android:onClick = "startAbout"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
 
 </RelativeLayout>
