@@ -18,10 +18,28 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-
+/**
+ * HouseSettingFragment class extends Fragment.
+ * This class is the layout of all the activities contained in House Setting
+ * @author Yun Luo
+ */
 public class HouseSettingFragment extends Fragment {
+    /**
+     * listView ListView object for ListView layout
+     */
     private ListView listView;
+    /**
+     * listValue ArrayList object for the value in the ListView
+     */
     ArrayList<String> listValue;
+
+    /**
+     * To creates and returns the view hierarchy associated with the fragment
+     * @param inflater The LayoutInflater object that used to inflate any views in the fragment
+     * @param container If non-null, this is the parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here
+     * @return the fragment UI
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,7 +52,7 @@ public class HouseSettingFragment extends Fragment {
             listView = (ListView) rootView.findViewById(R.id.home_List);
 
             //Define Array value to show in ListView
-          //  String[] listValues= new String[]{"Garage","House Temperature","Outdoor Weather"};
+
         listValue = new ArrayList<>();
         listValue.add(getString(R.string.house_garage));
         listValue.add(getString(R.string.house_tempsetting));
@@ -47,6 +65,7 @@ public class HouseSettingFragment extends Fragment {
                     (getContext(),android.R.layout.simple_list_item_1,listValue);
 
             listView.setAdapter(arrayAdapter);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -85,7 +104,7 @@ public class HouseSettingFragment extends Fragment {
 
             }
         });
-
+// About button
         Button button = (Button) rootView.findViewById(R.id.about);
         button.setOnClickListener(new View.OnClickListener()
         {

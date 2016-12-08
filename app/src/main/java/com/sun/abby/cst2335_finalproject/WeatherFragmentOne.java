@@ -31,26 +31,53 @@ import java.net.URL;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author yun
  */
 public class WeatherFragmentOne extends Fragment {
-
+    /**
+     * weatherURL String object that is url address
+     */
     private static final String weatherURL =
             "http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric";
-
+    /**
+     * weather_image ImageView object is the image for the current weathe
+     */
     private ImageView weather_image;
+    /**
+     * cur_temp TextView object is the value of current temperature
+     */
     private TextView cur_temp;
-   // private TextView location;
+    /**
+     * lastUpdate TextView object which shows the last time of the weather info been updated
+     */
     private TextView lastUpdate;
+    /**
+     * detail TextView object shows the detail info of current weather
+     */
     private TextView detail;
+    /**
+     * pBar ProgressBar object that show the progress of downloading
+     */
     private ProgressBar pBar;
+    /**
+     * weather_icon Bitmap object stores the weather picture
+     */
     static Bitmap weather_icon = null;
 
-
+    /**
+     * default constructor
+     */
     public WeatherFragmentOne() {
         // Required empty public constructor
     }
 
-
+    /**
+     o creates and returns the view hierarchy associated with the fragment
+     * @param inflater The LayoutInflater object that used to inflate any views in the fragment
+     * @param container If non-null, this is the parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here
+     * @return the container of the fragment
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,6 +96,9 @@ public class WeatherFragmentOne extends Fragment {
         return view;
     }// end of onCreateView
 
+    /**
+     * inner class extends AsyncTask which is easy use of the UI thread
+     */
     class WeatherQuery extends AsyncTask<String, Integer, String> {
        // private String loc;
         private String update;
@@ -78,7 +108,11 @@ public class WeatherFragmentOne extends Fragment {
         private Bitmap cur_weather;
         private String iconName;
 
-
+        /**
+         * This method is used to perform background computation that can take a long time
+         * @param params String argument
+         * @return success if connect to url
+         */
         protected String doInBackground(String... params) {
             HttpURLConnection conn = null;
 
@@ -166,6 +200,11 @@ public class WeatherFragmentOne extends Fragment {
 
         }// end of doInBackground
 
+        /**
+         * This method is used to display any form of progress
+         * in the user interface while the background computation is still executing.
+         * @param value execution time
+         */
         @Override
         protected void onProgressUpdate(Integer... value) {
             pBar.setProgress(value[0]);
@@ -173,6 +212,10 @@ public class WeatherFragmentOne extends Fragment {
             pBar.setVisibility(View.VISIBLE);
         }// end of onProgressUpdate
 
+        /**
+         * To invoke on the UI thread after the background computation finishes
+         * @param s Sting object
+         */
         protected void onPostExecute(String s) {
             cur_temp.setText("Current temperature: " + curr_tem);
             lastUpdate.setText("Last Update: " + update);
@@ -182,6 +225,11 @@ public class WeatherFragmentOne extends Fragment {
 
         } // end of onPostExecute
 
+        /**
+         * To distinct if the file has been download before
+         * @param fname String object which is the file name
+         * @return true of false
+         */
         public boolean fileExistance(String fname) {
             File file = getActivity().getFileStreamPath(fname);
 
@@ -190,6 +238,12 @@ public class WeatherFragmentOne extends Fragment {
 
         }
 
+        /**
+         * To get the image of current weather
+         * @param url URL object that is the URL address
+         * @param fName String object this is the icon name
+         * @return the weather icon
+         */
         public Bitmap getImage(URL url, String fName) {
             HttpURLConnection connection = null;
             weather_icon = null;
@@ -214,6 +268,11 @@ public class WeatherFragmentOne extends Fragment {
             return weather_icon;
         }
 
+        /**
+         *  To read icon file
+         * @param imagefile Bitmap object icon picture
+         * @return icon picture
+         */
         public Bitmap readImage(String imagefile) {
             Bitmap bm = null;
             try {

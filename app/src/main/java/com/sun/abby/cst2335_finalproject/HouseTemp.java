@@ -35,26 +35,58 @@ import android.widget.Toast;
 import com.sun.abby.cst2335_finalproject.dbhelperTemp.HouseTempDatabaseHelper;
 
 
-
+/**
+ * This is the main activity of House Temperature setting extends AppCompatActivity
+ * @author yun
+ */
 public class HouseTemp extends AppCompatActivity{
+    /**
+     *  btnTimePicker Button object for TimePicker widget
+     */
     Button btnTimePicker;
+    /**
+     * btnSentSeting Button object to add temperature setting
+     */
     Button btnSentSeting;
-    Button btnDelete;
-    Button btnCancel;
+    /**
+     * txtTime EditText object to hold time value
+     */
     EditText txtTime;
+    /**
+     * txtTemperatue EditText object to hold tempture value
+     */
     EditText txtTemperatue;
 
-    //private int mHour, mMinute;
-
     //Variables for ListView
+    /**
+     * listView ListView object
+     */
     private ListView listView;
+    /**
+     *   timeTempArray ArrayList<String> object
+     */
     public ArrayList<String> timeTempArray;
+    /**
+     * ACTIVITY_NAME is HouseTemp
+     */
     protected static final String ACTIVITY_NAME = "HouseTemp";
+    /**
+     * dbHelper HouseTempDatabaseHelper object
+     */
     private HouseTempDatabaseHelper dbHelper;
+    /**
+     *  database SQLiteDatabase object
+     */
     private SQLiteDatabase database;
+    /**
+     * cursor Cursor object
+     */
     private Cursor cursor;
 
-
+    /**
+     * To initialize the HouseTemp activity
+     * @param savedInstanceState Bundle object
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +103,7 @@ public class HouseTemp extends AppCompatActivity{
         listView = (ListView) findViewById(R.id.temp_data_listview);
         final TempAdapter messageAdapter = new TempAdapter(this);
         listView.setAdapter(messageAdapter);
-        //yun add
+
         txtTemperatue = (EditText) findViewById(R.id.input_temp);
         btnSentSeting = (Button) findViewById(R.id.sent_db);
 
@@ -221,6 +253,9 @@ public class HouseTemp extends AppCompatActivity{
 
     }// end of onCreate()
 
+    /**
+     *The activity is finishing or has been destroyed by system
+     */
     public void onDestroy(){
 
         if(cursor !=null) {
@@ -235,14 +270,23 @@ public class HouseTemp extends AppCompatActivity{
 
 
     // menu bar
+
+    /**
+     *To create option menu
+     * @param m Menu object
+     * @return true
+     */
     public boolean onCreateOptionsMenu(Menu m) {
         getMenuInflater().inflate(R.menu.toolbar_garage, m);
         return true;
 
     }
-   /* public void onDestroy(){
-        database.close();
-    }*/
+
+    /**
+     * To specify the selected item on menu
+     * @param mi MenuItem object
+     * @return specified the selected item
+     */
     public boolean onOptionsItemSelected(MenuItem mi) {
         int id = mi.getItemId();
         switch (id) {
@@ -277,6 +321,9 @@ public class HouseTemp extends AppCompatActivity{
         return true;
     }//onOptionsItemSelected
 
+    /**
+     * inner class extends ArrayAdapter to record in a array
+     */
     private class TempAdapter extends ArrayAdapter<String> {
         public TempAdapter(Context ctx){
             super(ctx,0);
@@ -284,17 +331,29 @@ public class HouseTemp extends AppCompatActivity{
 
         }
 
-        // number of rows in listView
+        /**
+         * number of rows in listView
+         * @return how many records in the listview
+         */
         public int getCount(){
             return timeTempArray.size();
         }
 
-        //position of item in the array list
+        /**
+         * position of item in the array list
+         * @param position position of item in the array list
+         * @return the String value of the position
+         */
         @Override
         public String getItem(int position){
             return (String)timeTempArray.get(position);
         }
 
+        /**
+         * position of item in the array list
+         * @param position position of item in the array list
+         * @return value of the position
+         */
         @Override
         public long getItemId(int position){
             return position;

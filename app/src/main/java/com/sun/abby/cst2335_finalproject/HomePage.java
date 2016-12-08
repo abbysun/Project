@@ -19,6 +19,12 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+/**
+ * Homepage class contains all the activities to start
+ * @Author: Abby, Chase, Yun
+ * @version :1.0.0
+ * @since Dec 7, 2016
+ */
 public class HomePage extends AppCompatActivity {
 
     /**
@@ -36,6 +42,10 @@ public class HomePage extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+    /**
+     * This method to initialize all the activities
+     * @param savedInstanceState Bundle object
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +75,11 @@ public class HomePage extends AppCompatActivity {
 
     }
 
-
+    /**
+     * This method to create a Menue toolbar
+     * @param menu Menu object
+     * @return true
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -73,6 +87,11 @@ public class HomePage extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * This method to pass the menu item has been selected.
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -100,6 +119,11 @@ public class HomePage extends AppCompatActivity {
             super(fm);
         }
 
+        /**
+         * To get fragment position
+         * @param position
+         * @return position of fragments
+         */
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
@@ -122,12 +146,21 @@ public class HomePage extends AppCompatActivity {
             }
         }
 
+        /**
+         * To get the count of fragment
+         * @return the number of fragment
+         */
         @Override
         public int getCount() {
             // Show 3 total pages.
             return 3;
         }
 
+        /**
+         * This method to get the title of each fragment
+         * @param position the position of each fragment
+         * @return the 3 fragments' titles
+         */
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {

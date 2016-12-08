@@ -20,13 +20,41 @@ import com.sun.abby.cst2335_finalproject.dbhelperTemp.HouseTempDatabaseHelper;
 
 import java.util.ArrayList;
 
+/**
+ * This class is where the temperature records to store and call
+ * @author yun
+ *
+ */
 public class ListViewTemp extends AppCompatActivity {
+    /**
+     * list View ListView object that for ListView layout
+     */
     private ListView listView;
+    /**
+     * timeTempArray ArrayList object to store the time and temperature array
+     */
     public static ArrayList<String> timeTempArray = new ArrayList<String>();
+    /**
+     * ACTIVITY_NAME String object ACTIVITY_NAME is "ListViewTemp"
+     */
     protected static final String ACTIVITY_NAME = "ListViewTemp";
+    /**
+     * dbHelper HouseTempDatabaseHelper object
+     */
     private HouseTempDatabaseHelper dbHelper;
+    /**
+     *  database SQLiteDatabase object
+     */
     private SQLiteDatabase database;
+    /**
+     *  cursor Cursor object
+     */
     private Cursor cursor;
+
+    /**
+     * To initialize the database activity
+     * @param savedInstanceState Bundle object
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,18 +89,14 @@ public class ListViewTemp extends AppCompatActivity {
             cursor.moveToNext();
         }
         cursor.close();
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+
 
     }
 
-
+    /**
+     * Inner class extends ArrayAdapter<String>. A concrete BaseAdapter
+     * that is backed by an array of arbitrary objects.
+     */
 
     private class TempAdapter extends ArrayAdapter<String>{
         public TempAdapter(Context ctx){
