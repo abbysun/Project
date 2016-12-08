@@ -9,10 +9,12 @@ import static com.sun.abby.cst2335_finalproject.LivingRoomDbHelper.LivingRoomEnt
 import static com.sun.abby.cst2335_finalproject.LivingRoomDbHelper.LivingRoomEntry.TABLE_NAME;
 
 /**
- * Created by null on 2016-12-06.
+ * Database helper for accessing LivingRoom.db
+ *
+ * Created by Chase Thorne on 2016-12-06.
  */
 
-public class LivingRoomDbHelper extends SQLiteOpenHelper {
+class LivingRoomDbHelper extends SQLiteOpenHelper {
 
     /* Inner class that defines the table contents */
     public static class LivingRoomEntry implements BaseColumns {
