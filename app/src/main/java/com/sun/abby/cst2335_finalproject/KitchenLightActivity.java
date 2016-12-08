@@ -7,6 +7,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.SeekBar;
 
+/**
+ * This activity controls the smart lighting in the kitchen. The lights can be turned on/off or be dimmed.
+ * The screen views are contained in activity_kitchen_light.xml
+ * @author Abby
+ */
 public class KitchenLightActivity extends AppCompatActivity {
     private SeekBar dim ;
     private WindowManager.LayoutParams lp;
