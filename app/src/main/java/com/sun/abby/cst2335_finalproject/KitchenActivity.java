@@ -9,6 +9,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * This class contains a listview, which displays all the kitchen appliances.
+ * Clicking the appliance will take users to the control activity for that appliance.
+ * This java file contains behavioural implementation for the views in activity_kitchen.xml
+ * @author Abby
+ */
 public class KitchenActivity extends AppCompatActivity {
     private String [] appliance = {"Microwave", "Fridge", "Smart Lighting"};
     private ListView listView;

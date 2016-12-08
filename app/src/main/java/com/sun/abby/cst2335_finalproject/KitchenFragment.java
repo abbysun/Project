@@ -11,7 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 /**
- * A view class representing
+ * A fragment class representing the kitchen control app in the homepage
+ * This class contains behavioural implementation for the view objects in kitchen.xml
  * Created by Abby on 2016-11-06.
  */
 

@@ -4,7 +4,6 @@ package com.sun.abby.cst2335_finalproject;
  * Model class for each food item
  * Created by Abby on 2016-12-05.
  */
-
 public class FoodItem {
     String name;
     String description;

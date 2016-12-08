@@ -21,10 +21,13 @@ import android.widget.Toast;
 import android.support.v7.app.AlertDialog;
 
 /**
- * Homepage class contains all the activities to start
- * @Author: Abby, Chase, Yun
- * @version :1.0.0
- * @since Dec 7, 2016
+ * This is the main activity that connects all the mini apps together. It uses fragments to display each app.
+ * This java class implements behaviours for the home_page.xml view
+ * There are 3 apps in total, one made by each team member:
+ * House setting app - Yun Luo
+ * Living room app - Chase Thorne
+ * Kitchen control app - Abby Sun
+ * @author Abby
  */
 public class HomePage extends AppCompatActivity {
 
