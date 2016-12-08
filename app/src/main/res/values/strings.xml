@@ -97,4 +97,38 @@
     <string name="title_activity_cooking_fragments">CookingFragmentsActivity</string>
     <string name="title_activity_fridge">FridgeActivity</string>
     <string name="title_activity_kitchen_light">KitchenLightActivity</string>
+
+    <!--House Setting-->
+    <string name="House_Setting">House Setting</string>
+    <string name="Outside_Weather">Outside Weather</string>
+    <string name="title_activity_garage">Garage</string>
+    <string name="title_activity_house_temp">HouseTemp</string>
+    <string name="title_activity_weather">Weather</string>
+    <string name="title_weather_list">Weathers</string>
+    <string name="title_weather_detail">Weather Detail</string>
+    <string name = "house_garage">Garage Setting</string>
+    <string name = "house_tempsetting">House Temperature</string>
+    <string name = "house_weather">Outdoor Weather</string>
+    <string name = "about">ABOUT</string>
+
+<!--Garage-->
+    <string name = "garage_light">Garage Light</string>
+    <string name = "garagedoor_openner">Garage Door</string>
+    <string name = "light_on">On</string>
+    <string name = "light_off">off</string>
+    <string name = "door_open">Open</string>
+    <string name = "door_close">Close</string>
+
+    <!-- Weather Setting-->
+    <string name="change_city">Change city</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_list_view_temp">ListViewTemp</string>
+<!--House Temperature-->
+    <string name="set_house_temp">Set House Temperature</string>
+    <string name="input_temp_hint">Input Temperature</string>
+    <string name="select_time">Select Time</string>
+    <string name="input_time_hint">Set Time</string>
+
 </resources>

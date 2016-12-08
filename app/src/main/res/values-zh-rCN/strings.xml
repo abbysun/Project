@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--House Setting-->
+    <string name = "house_garage">车库控制</string>
+    <string name = "house_tempsetting">室温调控</string>
+    <string name = "house_weather">室外天气</string>
+    <string name = "about">说明</string>
+
+    <!--Garage Setting-->
+    <string name = "garage_light">车库灯控</string>
+    <string name = "garagedoor_openner">车库门开关</string>
+    <string name = "light_on">开灯</string>
+    <string name = "light_off">关灯</string>
+    <string name = "door_open">开门</string>
+    <string name = "door_close">关门</string>
+
+
+    <!--House Temperature-->
+    <string name="set_house_temp">添加控温记录</string>
+    <string name="input_temp_hint">录入室外</string>
+    <string name="select_time">录入时间</string>
+    <string name="input_time_hint">设置时间</string>
+</resources>
