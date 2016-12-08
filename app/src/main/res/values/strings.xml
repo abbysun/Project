@@ -14,7 +14,35 @@
     <string name="action_back">Back</string>
     <string name="fridge_temperature">Fridge Temperature</string>
     <string name="freezer_temperature">Freezer Temperature</string>
-    <string name="placeholder_temp">1°C</string>
+    <string name="init_fridge_temp">0°C</string>
+    <string name="init_freezer_temp">-10 °C</string>
+    <string name="title_activity_kitchen_lighting">Kitchen Lighting Activity</string>
+    <string name="title_activity_cooking_fragments">Cooking Fragments Activity</string>
+    <string name="title_activity_fridge">Fridge Activity</string>
+    <string name="action_add_item">Add Food Item</string>
+    <string name="action_drop_item">Delete Food Item</string>
+    <string name="enter_food_name">Enter food name: </string>
+    <string name="enter_food_description">Enter description for this item: </string>
+    <string name="fridge_text">Fridge</string>
+    <string name="freezer_text">Freezer</string>
+    <string name="confirm_item_delete">Are you sure you want to delete the selected item?</string>
+    <string name="action_kitchen_help">Kitchen Help</string>
+    <string name="kitchen_help_msg">Author: Abby Sun. Version 1.
+        Access kitchen appliances by clicking the cooking pot icon or go to the kitchen fragment page.</string>
+    <string name="action_help">Help</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="delete_from">Delete From: </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="reset">reset</string>
+    <string name="enter_time">Please Enter Time in Seconds</string>
+    <string name="stop">Stop</string>
+    <string name="stop_microwave">Stop Microwave and Reset Timer</string>
+    <string name="control_kitchen_light">Control Kitchen Light</string>
+
 
     <!-- Living Room -->
     <string name="dialog_ok">OK</string>
@@ -71,4 +99,5 @@
     <string name="title_activity_kitchen_lighting">KitchenLightingActivity</string>
     <string name="title_activity_cooking_fragments">CookingFragmentsActivity</string>
     <string name="title_activity_fridge">FridgeActivity</string>
+    <string name="title_activity_kitchen_light">KitchenLightActivity</string>
 </resources>

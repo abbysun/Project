@@ -30,19 +30,18 @@ public class KitchenActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 switch(position){
                     case 0:
-                        Toast.makeText(getApplicationContext(), "clicked microwave", Toast.LENGTH_SHORT).show();
                         Intent microwaveIntent = new Intent(getApplicationContext(), MicrowaveActivity.class);
                         startActivity(microwaveIntent);
                         break;
 
-//                    case 1:
-//                        Toast.makeText(getApplicationContext(), "clicked Fridge", Toast.LENGTH_SHORT).show();
-//                        Intent fridgeIntent = new Intent(getApplicationContext(), FridgeActivity.class);
-//                        startActivity(fridgeIntent);
-//                        break;
+                    case 1:
+                        Intent fridgeIntent = new Intent(getApplicationContext(), FridgeActivity.class);
+                        startActivity(fridgeIntent);
+                        break;
 
                     case 2:
-                        Toast.makeText(getApplicationContext(), "clicked Smart Lighting", Toast.LENGTH_SHORT).show();
+                        Intent lightIntent = new Intent(getApplicationContext(), KitchenLightActivity.class);
+                        startActivity(lightIntent);
                         break;
                 }
             }
