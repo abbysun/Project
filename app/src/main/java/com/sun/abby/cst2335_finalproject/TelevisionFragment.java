@@ -1,7 +1,5 @@
 package com.sun.abby.cst2335_finalproject;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,6 +13,11 @@ import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
+/**
+ * Class to handle the creation and events in the television activity of the app.
+ *
+ * Created by Chase Thorne.
+ */
 public class TelevisionFragment extends Fragment {
 
     ImageButton ibUp;
@@ -42,6 +45,7 @@ public class TelevisionFragment extends Fragment {
         tvChannel = (TextView) tvView.findViewById(R.id.television_channel);
         tvChannel.setText("Channel: 1");
 
+        // Placeholder OnClickListener for the remote.
         View.OnClickListener tvListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -10,6 +10,12 @@ import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
+
+/**
+ * Class to handle the creation and events in the television fragment of the app.
+ *
+ * Created by Chase Thorne.
+ */
 public class TelevisionActivity extends AppCompatActivity {
 
     ImageButton ibUp;
@@ -32,6 +38,7 @@ public class TelevisionActivity extends AppCompatActivity {
         tvChannel = (TextView) findViewById(R.id.television_channel);
         tvChannel.setText("Channel: 1");
 
+        // Placeholder OnClickListener for the remote.
         View.OnClickListener tvListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {

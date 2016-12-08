@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.widget.SeekBar;
 
 /**
- * Created by null on 2016-12-05.
+ * Class to handle the creation and events in the color selection dialog fragment of the app.
+ *
+ * Created by Chase Thorne on 2016-12-05.
  */
 
 public class ColorDialogFragment extends DialogFragment {
@@ -41,6 +43,8 @@ public class ColorDialogFragment extends DialogFragment {
 //                        colorText = ", Red: "+ red.getProgress()
 //                                + ", Green: "+ green.getProgress()
 //                                + ", Blue: "+ blue.getProgress();
+
+                        // Notify the user the color has changed.
                         Snackbar.make(getActivity().findViewById(R.id.light_3_seekbar), colorText, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }

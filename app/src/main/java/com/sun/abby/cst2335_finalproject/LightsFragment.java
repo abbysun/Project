@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 /**
- * Created by null on 2016-12-05.
+ * Class to handle the creation and events in the lights fragment of the app.
+ *
+ * Created by Chase Thorne on 2016-12-05.
  */
-
 public class LightsFragment extends Fragment {
 
     Button colorSelect;
@@ -27,6 +28,7 @@ public class LightsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View blindsView = inflater.inflate(R.layout.fragment_lights, container, false);
 
+        // loads the color selection dialog
         colorSelect = (Button) blindsView.findViewById(R.id.light_3_color);
         colorSelect.setOnClickListener(new View.OnClickListener() {
             @Override

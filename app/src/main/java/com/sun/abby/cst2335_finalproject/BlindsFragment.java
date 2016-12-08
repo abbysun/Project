@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 /**
+ * Class to handle the creation and events in the blinds fragment of the app.
+ *
  * Created by null on 2016-12-05.
  */
 
