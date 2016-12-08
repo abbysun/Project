@@ -16,9 +16,6 @@
     <string name="freezer_temperature">Freezer Temperature</string>
     <string name="init_fridge_temp">0°C</string>
     <string name="init_freezer_temp">-10 °C</string>
-    <string name="title_activity_kitchen_lighting">Kitchen Lighting Activity</string>
-    <string name="title_activity_cooking_fragments">Cooking Fragments Activity</string>
-    <string name="title_activity_fridge">Fridge Activity</string>
     <string name="action_add_item">Add Food Item</string>
     <string name="action_drop_item">Delete Food Item</string>
     <string name="enter_food_name">Enter food name: </string>
