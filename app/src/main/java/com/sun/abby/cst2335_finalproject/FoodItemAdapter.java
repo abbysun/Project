@@ -11,9 +11,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
+ * This class is created for an updatable listview
+ * The listview contains and displays food items in the fridge and the freezer
  * Created by Abby on 2016-12-05.
  */
-
 public class FoodItemAdapter extends ArrayAdapter<FoodItem> {
     private Context context;
     private int layoutResourceId;

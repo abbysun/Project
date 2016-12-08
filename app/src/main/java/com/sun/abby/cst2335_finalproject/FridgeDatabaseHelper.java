@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 /**
+ * This is a database helper class for accessing the fridge items database
  * Created by Abby on 2016-12-04.
  */
 public class FridgeDatabaseHelper extends SQLiteOpenHelper {
@@ -64,12 +65,12 @@ public class FridgeDatabaseHelper extends SQLiteOpenHelper {
 
     public void removeFridgeData(int id){
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_FRIDGE + " WHERE " + COLUMN1 + "== " + id);
+        db.execSQL("DELETE FROM " + TABLE_FRIDGE + " WHERE " + COLUMN1 + "=" + id);
     }
 
     public void removeFreezerData(int id){
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_FREEZER + " WHERE " + COLUMN1 + "== " + id);
+        db.execSQL("DELETE FROM " + TABLE_FREEZER + " WHERE " + COLUMN1 + "=" + id);
     }
 
     public void insertFreezerData(String name, String description){

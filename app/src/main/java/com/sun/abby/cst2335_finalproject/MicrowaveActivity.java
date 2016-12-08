@@ -13,6 +13,12 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+/**
+ * This is a control activity for the microwave in the kitchen.
+ * It implements behaviours for views in activity_microwave.xml
+ * This class contains EditText and progress bar
+ * @author Abby
+ */
 public class MicrowaveActivity extends AppCompatActivity {
     private Button onOff;
     private Button stop;
